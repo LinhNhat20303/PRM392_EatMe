@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_recipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4sdp"
+    app:dragEdge="right"
+    app:revealMode="same_level">
+
+    <LinearLayout
+        android:id="@+id/layout_delete_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="@string/delete" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_saved_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@drawable/border_recipe_item">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_save_recipe"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="10dip" />
+
+        <TextView
+            android:id="@+id/tv_recipe_name"
+            android:layout_width="@dimen/_210sdp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/heebo_light"
+            android:maxLines="2"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="0dp"
+            android:paddingTop="@dimen/_8sdp"
+            tools:text="ehsdfiosdfuisdoofs asasddasasdasdd asd  asd asd asd asd asdrasd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/img_save_recipe"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/img_save_recipe">
+
+            <ImageView
+                android:id="@+id/img_recipe_calories"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/calories"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img_save_recipe"
+                android:contentDescription="@string/kcal" />
+
+            <TextView
+                android:id="@+id/tv_recipe_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/heebo_light"
+                android:gravity="bottom"
+                tools:text="1231"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:id="@+id/tv_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/heebo_light"
+                android:gravity="bottom"
+                android:paddingStart="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:paddingEnd="0dp"
+                android:text="@string/kcal_lowercase"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+            <ImageView
+                android:id="@+id/img_recipe_ready_minute"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/time"
+                android:contentDescription="@string/time" />
+
+            <TextView
+                android:id="@+id/tv_recipe_ready_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/heebo_light"
+                android:gravity="bottom"
+                android:paddingStart="@dimen/_2sdp"
+                android:paddingEnd="0dp"
+                tools:text="123"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img_recipe_ready_minute" />
+
+            <TextView
+                android:id="@+id/tv_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/heebo_light"
+                android:gravity="bottom"
+                android:paddingStart="@dimen/_2sdp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:text="@string/min"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>
